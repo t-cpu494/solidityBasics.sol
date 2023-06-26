@@ -1,0 +1,12 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >= 0.7.0 < 0.9.0;
+
+contract Swap {
+    function swap( int x, int y ) public pure returns( int, int ) {
+        int temp;
+        temp = x;
+        x = y;
+        y = temp;
+        return( x, y );
+    }
+}
