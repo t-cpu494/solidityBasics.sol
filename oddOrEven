@@ -1,0 +1,11 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >= 0.7.0 < 0.9.0;
+
+contract oddOrEven {
+    function OddOrEven( int num ) public pure returns( uint ) {
+        if ( num % 2 == 0 ) {
+            return 1;
+        }
+            return 0;
+    }
+}
