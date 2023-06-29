@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract Palindrome {
+    function palindrome(uint x) public pure returns(uint) {
+        uint original = x;
+        uint remainder;
+        uint inverted;
+
+        while(original != 0) {
+            remainder = original % 10;
+            inverted = inverted * 10 + remainder;
+            original /= 10;
+        }
+
+        if ( inverted == x ) { return 1; }
+        else { return 0; }
+    }
+}
