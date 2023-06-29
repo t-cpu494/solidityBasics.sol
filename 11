@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >= 0.5.0 < 0.9.0;
+
+contract reverseInteger {
+    function Reverse(uint x) public pure returns(uint) {
+        uint original = x;
+        uint remainder;
+        uint reverse;
+
+        while(original != 0) {
+            remainder = original % 10;
+            reverse = reverse * 10 + remainder;
+            original /= 10;
+        }
+
+        return reverse;
+
+    }
+}
